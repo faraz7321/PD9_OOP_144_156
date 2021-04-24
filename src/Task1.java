@@ -38,4 +38,18 @@ public class Task1 {
         }
         return count;
     }
+
+    public static int puncCounter(String s) {
+        int count = 0;
+        if (s == "") {
+            return 0;
+        }
+        char[] arr = s.toCharArray();
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == 'a' || arr[i] == 'e' || arr[i] == 'i' || arr[i] == 'o' || arr[i] == 'u') {
+                count++;
+            }
+        }
+        return count;
+    }
 }
