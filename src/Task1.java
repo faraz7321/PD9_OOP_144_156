@@ -6,6 +6,7 @@ public class Task1 {
         System.out.println("Enter a String: ");
         Scanner scanner = new Scanner(System.in);
         // String x = scanner.nextLine();
+	System.out.print("We are just creating a conflict");
         System.out.println("Number of words: " + wordCounter(s));
         System.out.println("Number of vowels: " + vowelCounter(s));
         System.out.println("Number of punctuations: " + puncCounter(s));
