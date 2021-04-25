@@ -9,6 +9,12 @@ public class Task1 {
         System.out.println("Number of words: " + wordCounter(s));
         System.out.println("Number of vowels: " + vowelCounter(s));
         System.out.println("Number of punctuations: " + puncCounter(s));
+        String sub = "The";
+        if (findSubString(s, sub)) {
+            System.out.println("\"" + sub + "\"" + " is a part of this string.");
+        } else {
+            System.out.println("\"" + sub + "\"" + " is not a part of this string.");
+        }
         scanner.close();
 
     }
@@ -61,7 +67,20 @@ public class Task1 {
 
     public static boolean findSubString(String s, String sub) {
         boolean flag = false;
-        for (int i = 0; i < s.length(); i++) {
+        char[] arr = s.toCharArray();
+        char[] subArr = sub.toCharArray();
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i] == subArr[0]) {
+                // System.out.println(arr[i]);
+                for (int j = 1; j < subArr.length; j++) {
+                    if (arr[i + j] == subArr[j]) {
+                        // System.out.println(arr[i + j]);
+                        flag = true;
+                    }
+                    // flag = false;
+                }
+            }
 
         }
         return flag;
